@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristina's Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile.css') }}">
+</head>
+<body>
+
+    <img src="{{ url_for('static', filename='img/ramka.png') }}" alt="Рамка" class="right-image">
+
+    <img src="{{ url_for('static', filename='img/willi.png') }}" alt="Фото" class="left-image">
+    <p class="dog-caption">and this is my dog Willie</p>
+        
+    
+    <div class="container">
+        <header>
+            <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+            <h1>ISAKOVA KRISTINA</h1>
+        </header>
+        <section class="about-me">
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='img/me.png') }}" alt="Kristina">
+            </div>
+            <div class="about-text">
+                <h2>ABOUT ME</h2>
+                <p>Hello everyone, my name is Kristina! I am a 4th year student at Vyatka State University College, majoring in Information Systems and Programming. I have been doing web and graphic design for over 5 years.</p>
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <h2>MY PORTFOLIO</h2>
+            <img src="{{ url_for('static', filename='img/portfolio.png') }}" alt="Portfolio" class="portfolio-img">
+            <a href="https://kwork.ru/user/_k_i_v_" target="_blank">
+                <img src="{{ url_for('static', filename='img/button-portfolio.png') }}" alt="Portfolio Button" class="portfolio-button">
+            </a>
+        </section>
+
+        <section class="contact-text">
+            <h2>IF YOU WANT TO CONTACT ME, CLICK HERE</h2>
+            <div class="contact-icons">
+                <a href="https://t.me/zhhhmp" target="_blank">
+                    <img src="{{ url_for('static', filename='img/telegram.png') }}" alt="Telegram" class="contact-icon">
+                </a>
+                <a href="https://instagram.com/yourinstagram" target="_blank">
+                    <img src="{{ url_for('static', filename='img/instagram.png') }}" alt="Instagram" class="contact-icon">
+                </a>
+                <img src="{{ url_for('static', filename='img/mail.png') }}" alt="Email" class="contact-icon" id="copy-email-button">
+            </div>
+            <!-- Сообщение, которое появляется после копирования -->
+            <p id="email-copied-message" style="display:none; color: green; font-size: 14px; margin-top: 10px;">Email copied!</p>
+            <!-- Изображение в самом конце сайта -->
+            <div class="footer-image">
+                <img src="{{ url_for('static', filename='img/Wili1.png') }}" alt="Wili Image">
+           </div>
+        </section>
+    </div>
+    
+    <script>
+        // Скрипт для копирования email в буфер обмена и показа сообщения
+        document.getElementById("copy-email-button").addEventListener("click", function() {
+            const email = "kris.isakopa@yandex.ru"; // Ваш email
+            navigator.clipboard.writeText(email).then(function() {
+                const message = document.getElementById("email-copied-message");
+                if (message) {
+                    message.style.display = "block"; // Показываем сообщение
+                    console.log("Email copied message displayed."); // Лог в консоль для проверки
+                    setTimeout(function() {
+                        message.style.display = "none"; // Скрываем сообщение через 2 секунды
+                    }, 2000);
+                } else {
+                    console.error("Element with ID 'email-copied-message' not found.");
+                }
+            }).catch(function(error) {
+                console.error("Ошибка копирования: ", error); // Обработка ошибок копирования
+            });
+        });
+    </script>
+    
+</body>
+</html>

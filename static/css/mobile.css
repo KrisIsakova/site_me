@@ -1,0 +1,199 @@
+@media (min-width: 425px) {
+    header h1{
+        margin-left: -400px;
+    }
+    
+    .container {
+        width: 425px;
+        height: 1240px;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+        background-image: url("/static/img/vec11.png"); /* Устанавливаем фон */
+        background-size: 107% auto; /* Устанавливаем ширину 90% от контейнера и сохраняем пропорции */
+        background-repeat: no-repeat; /* Отключаем повторение изображения */
+        background-position: -10px; /* Размещаем изображение по центру сверху */
+        background-position-y: 100px ;
+        box-shadow: 0 0 15px rgb(56, 0, 0);
+        overflow-y: auto;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: row; /* Измените направление на строку */
+        align-items: center; /* Центрируем изображение и текст по вертикали */
+        margin-right: 20px;
+    }
+    
+    
+    .about-image img {
+        position: absolute;
+        width: 180px;
+        height: 138px;
+        margin: 0;
+        right: 4.5px;
+        top: 187px;
+    }
+    
+    .about-text {
+        max-width: 200px; /* Максимальная ширина текста */
+        text-align: center; /* Центрируем текст */
+        margin-top: 20px; /* Отступ сверху */
+    }
+    /* текст обо мне*/
+    .about-text h2 {
+        position: absolute;
+        font-family: 'Michroma', sans-serif; /* Применяем шрифт Michroma */
+        font-size: 10px; /* Размер заголовка секции "About Me" */
+        color: #000;
+        top: 302px;
+        right: 158px;
+    }
+    
+    .about-text p {
+        width: 210px;
+        height: 50px;
+        font-family: 'Michroma', sans-serif; /* Применяем шрифт Michroma */
+        font-size: 10px; /* Размер шрифта описания */
+        color: #A80C0C; /* Цвет текста */
+        line-height: 1.5; /* Межстрочное расстояние */
+        position: absolute;
+        top: 320px; /*по выстое*/
+        right: 17px;
+        text-align: left; /* Выравнивание текста по левой стороне */
+    }
+    
+    /*Рамка*/
+    .right-image {
+        position: absolute;
+        left: 191px; /* Отступ от левого края */
+        top: 62.2%; /* Позиционируем изображение по вертикали */
+        transform: translateY(-15.3%); /* Центрируем по вертикали */
+        width: 230px; /* Ширина изображения, настройте по необходимости */
+        height:118px; /* Автоматическая высота для сохранения пропорций */
+        border-radius: 0px; /* Скругляем углы (по желанию) */
+    }    
+
+        /*Вилли*/
+    .left-image {
+        position: absolute;
+        left: 0px; /* Отступ от левого края */
+        top: 60%; /* Позиционируем изображение по вертикали */
+        transform: translateY(-50%); /* Центрируем по вертикали */
+        width: 150px; /* Ширина изображения, настройте по необходимости */
+        height: auto; /* Автоматическая высота для сохранения пропорций */
+        border-radius: 0px; /* Скругляем углы (по желанию) */
+
+    }
+    .dog-caption {
+        position: absolute;
+        left: 0px; /* Отступ слева, как у изображения */
+        top: 72%; /* Позиционируем ниже изображения */
+        transform: translateY(-50%);
+        font-family: 'Michroma', sans-serif;
+        font-size: 12px;
+        color: #000000; /* Цвет текста */
+        text-align: center;
+        width: 150px; /* Задаем ширину, как у изображения */
+    }
+    /* Секция портфолио */
+    .portfolio-section {
+        margin-top: 450px; /* Отступ сверху */
+    }
+
+    .portfolio-section h2 {
+        font-size: 14px; /* Размер заголовка секции портфолио */
+        font-family: 'Michroma', sans-serif; /* Применяем шрифт Michroma */
+        color: #000;
+        margin-bottom: 40px; /* Отступ снизу */
+        text-align: center; /* Центрируем заголовок */
+    }
+    .portfolio-img {
+        width: 320px; /* Ширина каждого изображения */
+        height: 140px; /* Автоматическая высота для сохранения пропорций */ 
+        border-radius: 0px; /* Легкое скругление углов */
+    }
+
+    /* Кнопка для портфолио */
+    .portfolio-button {
+        width: 165px;
+        height: 45px;
+        display: inline-block; /* Делаем кнопку блочно-строчным элементом */
+        margin-top: 30px; /* Отступ сверху */
+        padding: 10px 20px; /* Внутренние отступы кнопки */
+        /*color: #d32222; /* Цвет текста кнопки */
+        text-transform: uppercase; /* Преобразуем текст кнопки в верхний регистр */
+        border-radius: 5px; /* Скругленные углы кнопки */
+        cursor: pointer; /* Меняем указатель на курсор при наведении */
+        font-weight: bold; /* Жирный текст */
+        text-align: center; /* Центрируем текст внутри кнопки */
+        margin-bottom: 80px; /* Новый отступ снизу */
+    }
+
+    /* Секция контактов */
+    .contact-text {
+        font-family: 'Michroma', sans-serif; /* Применяем шрифт Michroma */
+        color: #a01313; /* Красный цвет текста */
+        text-transform: uppercase; /* Преобразуем текст в верхний регистр */
+        font-size: 10px; /* Задайте нужный размер шрифта */
+        text-align: center; /* Центрируем текст */
+    }
+
+
+    .contacts {
+        margin-top: 50px; /* Отступ сверху */
+        text-align: center; /* Центрируем содержимое */
+    }
+
+    .contacts p {
+        font-size: 10px; /* Размер шрифта текста в секции контактов */
+        color: #d32222; /* Красный цвет текста */
+    }
+
+    /* Иконки контактов */
+    .contact-icons {
+        display: flex; /* Используем flex-контейнер */
+        justify-content: center; /* Центрируем иконки */
+        gap: 50px; /* Расстояние между иконками */
+        margin-top: 40px; /* Отступ сверху */
+    }
+
+    .contact-icon {
+        width: 30px; /* Ширина каждой иконки */
+        height: 30px; /* Автоматическая высота */
+        cursor: pointer; /* Меняем указатель на курсор при наведении */
+    }
+
+    /* Сообщение о копировании email */
+    #email-copied-message {
+        margin-top: 10px; /* Отступ сверху */
+        color: green; /* Зеленый цвет текста */
+        font-size: 14px; /* Размер шрифта сообщения */
+    }
+
+    .footer-image {
+        margin-top: 20px; /* Отступ сверху для разделения от других элементов */
+        text-align: center; /* Центрируем изображение */
+        
+    }
+
+    .footer-image img {
+        width: 250px; /* Задайте желаемую ширину */
+        height: auto; /* Автоматическая высота для сохранения пропорций */
+        border-radius: 0px; /* Легкое скругление углов, при необходимости */
+    }
+
+
+
+
+
+
+}
+
+
+@media (min-width: 603px) {
+    header h1{
+        left: 50px;
+    }
+    
+}
